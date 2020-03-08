@@ -1,2 +1,2 @@
 # MOwNiT
-Metody Obliczeniowe w nauce i Technice 
+Metody Obliczeniowe w Nauce i Technice 
