@@ -22,6 +22,7 @@ def add_n_times(x, n, sum):
 table = [["float16", add_n_times(np.float16(0.09531258654533566), 100000000, np.float16(0))],
         ["float32", add_n_times(np.float32(0.09531258654533566), 100000000, np.float32(0))],
         ["float64", add_n_times(np.float64(0.09531258654533566), 100000000, np.float64(0))],
-        ["kahan algorithm", kahan_algorithm(0.09531258654533566, 100000000)]]
+        ["kahan algorithm", kahan_algorithm(0.09531258654533566, 100000000)],
+        ["Correct value:", 0.09531258654533566*100000000]]
 
 print(tabulate(table, headers=['Type', 'Value'], floatfmt=".10f"))
