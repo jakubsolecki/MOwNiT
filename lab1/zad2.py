@@ -25,7 +25,6 @@ def show_bin_and_dec(number):
             mantissa_dec += 2 ** pow
         pow -= 1
 
-    # print('Floating point numbers (64-Bit):')
     print('number (dec) = sign (1 + mantissa) x 2 ** (exponent - 1023)')
     print(number, '(dec) =', sign, f'(1 + {mantissa_dec}) x 2 ** ({exponent_dec} - 1023) = '
                                    f'{sign}{1 + mantissa_dec} x 2 ** {exponent_dec - 1023}')

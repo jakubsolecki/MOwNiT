@@ -8,6 +8,6 @@ def next_float(x):
     print(show_bin_and_dec(np.nextafter(x, 1)))
 
 
-next_float(1.2)
+next_float(0)
 next_float(1.75)
 next_float(1.25)
