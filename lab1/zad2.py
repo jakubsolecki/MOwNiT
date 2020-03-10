@@ -1,5 +1,5 @@
 import bitstring as bs
-from tabulate import tabulate
+
 
 def show_bin_and_dec(number):
     float64 = bs.BitArray(float=number, length=64)
@@ -25,11 +25,15 @@ def show_bin_and_dec(number):
             mantissa_dec += 2 ** pow
         pow -= 1
 
-    table = [[float64.bin[0], exponent, mantissa], [sign, exponent_dec, mantissa_dec]]
-    print('Floating point numbers (64-Bit):', '\n')
+    # print('Floating point numbers (64-Bit):')
     print('number (dec) = sign (1 + mantissa) x 2 ** (exponent - 1023)')
     print(number, '(dec) =', sign, f'(1 + {mantissa_dec}) x 2 ** ({exponent_dec} - 1023) = '
-                                   f'{sign}{1 + mantissa_dec} x 2 ** {exponent_dec - 1023}', '\n')
-    print(tabulate(table, headers=['Sign', 'Exponent', 'Mantissa']))
+                                   f'{sign}{1 + mantissa_dec} x 2 ** {exponent_dec - 1023}')
+    print("Sign Exponent Mantissa")
+    print(float64.bin[0], exponent, mantissa)
+    print(sign, exponent_dec, mantissa_dec, '\n')
 
-show_bin_and_dec(13.25)
+
+show_bin_and_dec(1.2)
+show_bin_and_dec(1.75)
+show_bin_and_dec(1.25)

@@ -69,6 +69,7 @@ for i in range(0, 149):
     # print("Is normalised:", is_normalised(binary))
     print("\n")
 
+
 def floatoctal_convert(my_number, places = 3):
    my_whole, my_dec = str(my_number).split(".")
    my_whole = int(my_whole)
@@ -79,6 +80,8 @@ def floatoctal_convert(my_number, places = 3):
       my_dec = int(my_dec)
       res += my_whole
    return res
+
+
 def my_decimal_converter(num):
    while num > 1:
       num /= 10
