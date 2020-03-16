@@ -1,5 +1,8 @@
 # Ignored files
+*.idea/
 .idea/
 __pycache__/
 lab1/.idea/
 lab1/__pycache__/
+.idea
+__pycache__
