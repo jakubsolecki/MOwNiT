@@ -1,6 +1,15 @@
 import numpy as np
 
 
+def has_zero(v):
+    print("Zero at:", np.where(v == 0))
+
+
+def has_inf(v):
+    print("inf at:", np.where(v == np.inf))
+    print("-inf at:", np.where(v == -np.inf))
+
+
 def are_equal(a, b):
     if a.ndim == b.ndim and a.size == b.size:
         return a == b
@@ -19,4 +28,8 @@ b = np.array([1, 2, 5])
 print(are_equal(a, b))
 
 c = np.array([[1, 2], [3, 4]])
-print(are_equal(c, a))
+d = np.mat(c)
+print(are_equal(d, a))
+
+has_zero(np.array([0, 1, 1]))
+has_inf(np.array([np.inf, 1, 1, -np.inf]))
