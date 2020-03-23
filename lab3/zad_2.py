@@ -18,12 +18,12 @@ def lagrange_polynomial(x_values, y_values):
     return sp.simplify(y)
 
 
-x_arr, y_arr = to_table(0, 10, 3, math.sqrt, "sqrt(x)")
-print("Lagrange polynomial for sqrt(x):", lagrange_polynomial(x_arr, y_arr), "\n")
-
-x_arr, y_arr = to_table(0, 10, 3, math.sin, "sin(x)")
-print("Lagrange polynomial for sqrt(x):", lagrange_polynomial(x_arr, y_arr), "\n")
-
-f = lambda x: x**3 + 2*x
-x_arr, y_arr = to_table(0, 10, 3, f, "x^3 + 2x")
-print("Lagrange polynomial for sqrt(x):", lagrange_polynomial(x_arr, y_arr), "\n")
+# x_arr, y_arr, _ = to_table(0, 10, 3, math.sqrt, "sqrt(x)")
+# print("Lagrange polynomial for sqrt(x):", lagrange_polynomial(x_arr, y_arr), "\n")
+#
+# x_arr, y_arr, _ = to_table(0, 10, 3, math.sin, "sin(x)")
+# print("Lagrange polynomial for sqrt(x):", lagrange_polynomial(x_arr, y_arr), "\n")
+#
+# f = lambda x: x**3 + 2*x
+# x_arr, y_arr, _ = to_table(0, 10, 3, f, "x^3 + 2x")
+# print("Lagrange polynomial for sqrt(x):", lagrange_polynomial(x_arr, y_arr), "\n")

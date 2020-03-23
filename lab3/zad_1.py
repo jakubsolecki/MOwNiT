@@ -12,11 +12,11 @@ def to_table(min, max, number_of_points, func, func_name):
         table.append([i, func(i)])
         x_values.append(i)
         y_values.append(func(i))
-    print(tabulate(table, headers=["x", func_name], tablefmt="grid", floatfmt=".10f"))
-    return x_values, y_values
+    return x_values, y_values, tabulate(table, headers=["x", func_name],
+                                        tablefmt="grid", floatfmt=".10f")
 
 
-# to_table(0, 10, 3, math.sqrt, "sqrt(x)")
-# # to_table(0, 10, 3, math.sin, "sin(x)")
-# # f = lambda x: x**3 + 2*x
-# # to_table(0, 10, 3, f, "x^3 + 2x")
+# print(to_table(0, 10, 3, math.sqrt, "sqrt(x)")[2])
+# print(to_table(0, 10, 3, math.sin, "sin(x)")[2])
+# f = lambda x: x**3 + 2*x
+# print(to_table(0, 10, 3, f, "x^3 + 2x")[2])
