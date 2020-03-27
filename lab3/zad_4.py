@@ -1,5 +1,5 @@
-from zad_1 import to_table
-from zad_3 import lagrange_interpolation, to_chart, cmp_inbetween_points
+from lab3.zad_1 import to_table
+from lab3.zad_3 import lagrange_interpolation, to_chart, cmp_inbetween_points
 import math
 
 def comparison(min, max, n):
@@ -25,4 +25,4 @@ def comparison(min, max, n):
     to_chart(min, max, 1000, f, f_approx, "x^3 + 2x")
 
 
-comparison(0, 10, 7)
+# comparison(0, 10, 7)

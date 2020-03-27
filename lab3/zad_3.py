@@ -2,7 +2,7 @@ import sympy as sp
 import numpy as np
 from tabulate import tabulate
 import math
-from zad_1 import to_table
+from lab3.zad_1 import to_table
 import matplotlib.pyplot as plt
 
 

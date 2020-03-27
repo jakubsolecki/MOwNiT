@@ -1,6 +1,6 @@
 import sympy as sp
 import math
-from zad_1 import to_table
+from lab3.zad_1 import to_table
 
 
 def lagrange_polynomial(x_values, y_values):
