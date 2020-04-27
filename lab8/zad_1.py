@@ -1,7 +1,6 @@
 import numpy as np
 import math
 import matplotlib.pyplot as plt
-from tabulate import tabulate
 
 
 f1 = lambda x: 2*x**2 - 2*x + 1
@@ -29,7 +28,7 @@ def to_chart(fun, a, b, n, func_name):
 def bisection_method(a, b, fun, n):  # n is the max number of allowed iterations
     if fun(a) * fun(b) > 0:
         # end function, no root
-        return None, None
+        return "None", "None"
     else:
         d = b - a
         x_0 = None
@@ -43,7 +42,6 @@ def bisection_method(a, b, fun, n):  # n is the max number of allowed iterations
             else:
                 a = x_0
 
-        print("Exceeded max number of iterations")
         e = d / 2**n
         return x_0, e
 
@@ -51,43 +49,28 @@ def bisection_method(a, b, fun, n):  # n is the max number of allowed iterations
 def compute():
     to_chart(f1, -2, 2, 100, f1_name)
     x_0, e = bisection_method(-2, 2, f1, 1000)
-    if x_0 is None and e is None:
-        print("No roots found")
-    else:
-        tab = [[x_0, e]]
-        print(tabulate(tab, headers=["Root", "E"], tablefmt="grid"), "\n\n")
+    print(f"Root = {x_0}")
+    print(f"E = {e}")
 
     to_chart(f2, 0, 1, 100, f2_name)
     x_0, e = bisection_method(0, 1, f2, 100)
-    if x_0 is None and e is None:
-        print("No roots found")
-    else:
-        tab = [[x_0, e]]
-        print(tabulate(tab, headers=["Root", "E"], tablefmt="grid"), "\n\n")
+    print(f"Root = {x_0}")
+    print(f"E = {e}")
 
     to_chart(f3, -4, 2, 100, f3_name)
     x_0, e = bisection_method(-4, 2, f3, 100)
-    if x_0 is None and e is None:
-        print("No roots found")
-    else:
-        tab = [[x_0, e]]
-        print(tabulate(tab, headers=["Root", "E"], tablefmt="grid"), "\n\n")
+    print(f"Root = {x_0}")
+    print(f"E = {e}")
 
     to_chart(f4, -1, 1, 100, f4_name)
     x_0, e = bisection_method(-1, 1, f4, 100)
-    if x_0 is None and e is None:
-        print("No roots found")
-    else:
-        tab = [[x_0, e]]
-        print(tabulate(tab, headers=["Root", "E"], tablefmt="grid"), "\n\n")
+    print(f"Root = {x_0}")
+    print(f"E = {e}")
 
     to_chart(f5, -1, 1, 100, f5_name)
     x_0, e = bisection_method(-1, 1, f5, 100)
-    if x_0 is None and e is None:
-        print("No roots found")
-    else:
-        tab = [[x_0, e]]
-        print(tabulate(tab, headers=["Root", "E"], tablefmt="grid"), "\n\n")
+    print(f"Root = {x_0}")
+    print(f"E = {e}")
 
 
 if __name__ == "__main__":
