@@ -14,24 +14,24 @@ def newton_raphson(fun, x, n):
 
 def comparison_2():
     to_chart(f1, -2, 2, 100, f1_name)
-    print("Initial guess: 0")
-    print(f"Root: {newton_raphson(f1, 0, 100)}")
+    print("Initial guess: 0.5")
+    print(f"Root: {newton_raphson(f1, 0.5, 100)}")
 
     to_chart(f2, 0, 1, 100, f2_name)
-    print("Initial guess: 1")
-    print(f"Root: {newton_raphson(f2, 1, 100)}")
+    print("Initial guess: 0.5")
+    print(f"Root: {newton_raphson(f2, 0.5, 100)}")
 
     to_chart(f3, -4, 2, 100, f3_name)
-    print("Initial guess: 1")
-    print(f"Root: {newton_raphson(f3, 1, 100)}")
+    print("Initial guess: 1.6")
+    print(f"Root: {newton_raphson(f3, 1.6, 100)}")
 
     to_chart(f4, -1, 1, 100, f4_name)
     print("Initial guess: 0")
     print(f"Root: {newton_raphson(f4, 0, 100)}")
 
     to_chart(f5, -1, 1, 100, f5_name)
-    print("Initial guess: 0")
-    print(f"Root: {newton_raphson(f5, 0, 100)}")
+    print("Initial guess: -0.5")
+    print(f"Root: {newton_raphson(f5, -0.5, 100)}")
 
 
 if __name__ == "__main__":
