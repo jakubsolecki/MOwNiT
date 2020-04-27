@@ -22,6 +22,7 @@ def to_chart(fun, a, b, n, func_name):
     plt.xlabel("X")
     plt.ylabel("Y")
     plt.title(func_name)
+    plt.grid()
     plt.show()
 
 
@@ -31,24 +32,25 @@ def bisection_method(a, b, fun, n):  # n is the max number of allowed iterations
         return None, None
     else:
         d = b - a
-        x_0 = 1
+        x_0 = None
         for i in range(n):
             x_0 = (a + b) / 2.0
             if fun(x_0) == 0:
-                e = d / 2**n
+                e = d / 2**i
                 return x_0, e
             elif fun(a) * fun(x_0) < 0:
                 b = x_0
             else:
                 a = x_0
 
+        print("Exceeded max number of iterations")
         e = d / 2**n
-        return x_0, e  # root
+        return x_0, e
 
 
 def compute():
-    to_chart(f1, -10, 10, 100, f1_name)
-    x_0, e = bisection_method(-10, 10, f1, 1000)
+    to_chart(f1, -2, 2, 100, f1_name)
+    x_0, e = bisection_method(-2, 2, f1, 1000)
     if x_0 is None and e is None:
         print("No roots found")
     else:
@@ -80,7 +82,7 @@ def compute():
         print(tabulate(tab, headers=["Root", "E"], tablefmt="grid"), "\n\n")
 
     to_chart(f5, -1, 1, 100, f5_name)
-    x_0, e = bisection_method(-1, 1, f5, 1000)
+    x_0, e = bisection_method(-1, 1, f5, 100)
     if x_0 is None and e is None:
         print("No roots found")
     else:
@@ -88,11 +90,5 @@ def compute():
         print(tabulate(tab, headers=["Root", "E"], tablefmt="grid"), "\n\n")
 
 
-# to_chart(f2, 0, 1, 100, f2_name)
-# to_chart(f3, -4, 2, 100, f3_name)
-# to_chart(f4, -1, 1, 100, f4_name)
-# to_chart(f5, -1, 1, 100, f5_name)
-# x, e = bisection_method(-10, 10, f1, 1000)
-# print(f"Closest to root: {x}, E = {e}")
-compute()
-# print(bisection_method(0, 1, f2, 1000))
+if __name__ == "__main__":
+    compute()
