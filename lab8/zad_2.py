@@ -5,7 +5,7 @@ from scipy.misc import derivative
 def newton_raphson(fun, x, n):
     for i in range(n):
         if derivative(fun, x) == 0:
-            return "None"
+            return "Not found"
         h = fun(x) / derivative(fun, x)
         x = x - h
 
