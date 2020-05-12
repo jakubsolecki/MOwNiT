@@ -146,7 +146,6 @@ def compare_times():
     plt.legend()
     plt.grid()
     plt.show()
-    plt.savefig("Task 1 - plot")
 
 
 if __name__ == '__main__':

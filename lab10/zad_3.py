@@ -35,8 +35,8 @@ def solve_time_comparison():
         print(f"    Crout:     {t1}s")
         print(f"    Doolittle: {t2}s")
         print(f"    Cholesky:  {t3}s")
-        print(f"    Numpy:     {t3}s")
-        print(f"    Scipy:     {t3}s")
+        print(f"    Numpy:     {t4}s")
+        print(f"    Scipy:     {t5}s")
         tab1.append(t1)
         tab2.append(t2)
         tab3.append(t3)
@@ -55,7 +55,6 @@ def solve_time_comparison():
     plt.legend()
     plt.grid()
     plt.show()
-    plt.savefig("Task 3 - plot")
 
 
 if __name__ == '__main__':
