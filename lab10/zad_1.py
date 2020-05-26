@@ -148,6 +148,8 @@ def compare_times():
     plt.show()
 
 
+
+
 if __name__ == '__main__':
     A, b = random_matrix(3, 10, 5)
     print(f"A:\n {A}\nb:\n {b}")
