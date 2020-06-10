@@ -5,7 +5,7 @@ import matplotlib as mpl
 
 
 def visualize(N=10):
-    AA, n = chebyshev_method(A, b, 1000, 0, 2, eps=1e-10)
+    AA, n = chebyshev_method(A, b, 1000, 1e-10, 1.0)
     x, y = [], []
 
     for i in range(1, N+1):
@@ -21,7 +21,8 @@ def visualize(N=10):
 if __name__ == "__main__":
     A = generate_matrix()
     b = generate_b_vector()
-    AA, n = chebyshev_method(A, b, 1000, 0, 2, eps=1e-10)
+    # AA, n = chebyshev_method(A, b, 1000, 0, 2, eps=1e-10)
+    AA, n = chebyshev_method(A, b, 1000, 1e-10, 1.0)
     print(f"Iterations: {n}")
     print(AA)
 
@@ -29,7 +30,7 @@ if __name__ == "__main__":
     print(f"\nIterations: {n}")
     print(AA)
 
-    AA, n = sor(A, b, 1000, 1e-10, 1.9)
+    AA, n = sor(A, b, 1000, 1e-10, 1.0)
     print(f"\nIterations : {n}")
     print(AA)
 

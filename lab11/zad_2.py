@@ -24,13 +24,14 @@ def sor(A, b, n, eps, omg):
     it = 0
     x = np.zeros_like(b)
     x_new = np.zeros_like(x)
-    for _ in range(n):
+    for j in range(n):
         it += 1
         for i in range(b.shape[0]):
             old_sum = np.dot(A[i, i + 1:], x_new[i + 1:])
             new_sum = np.dot(A[i, :i], x[:i])
             x[i] = (b[i] - (old_sum + new_sum)) / A[i, i]
             x[i] = np.dot(x[i], omg) + np.dot(x_new[i], (1 - omg))
+
         if np.linalg.norm(np.dot(A, x) - b) < eps:
             return x_new, it
         x_new = x
